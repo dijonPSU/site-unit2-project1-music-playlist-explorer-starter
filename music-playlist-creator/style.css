@@ -7,10 +7,11 @@ body {
 }
 
 
-#playlist-card{
+#playlist-cards{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 300px);
+    gap: 120px;
+    justify-content: center;
 }
 
 .playlist-card{
@@ -19,6 +20,16 @@ body {
     flex-direction: column;
     border-radius: 8px;
     position: relative;
+    width: 300px;
+    height: 420px;
+}
+
+.playlist-img{
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 97%;
 }
 
 .like-count{
@@ -28,6 +39,9 @@ body {
 
 .like-count p{
     margin: 0;
+    align-items: center;
+    margin-top: auto;
+    align-self: flex-end;
 }
 
 #banner {
@@ -36,7 +50,8 @@ body {
     justify-content: space-between;
     background-color: gainsboro;
     padding: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    border: 1px black solid;
 }
 
 
