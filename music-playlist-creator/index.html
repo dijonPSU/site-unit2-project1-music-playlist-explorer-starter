@@ -5,24 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>testing git connection</h1>
-        <!-- Your header content here -->
+    <header id="banner">
+        <h1>Music Playlist Explorer</h1>
+        <div class="banner-links">
+            <p>Featured</p>
+            <p><a href="google.com">All</a></p>
+        </div>
+
     </header>
 
     <main>
-        <!-- Your main content here -->
+        <section id="playlist-cards">
+            <article class="playlist-card">
+                <img src="assets/img/playlist.png" alt="Playlist 1" width="250px">
+                <h2>Playlist Name</h 2>
+                <p>Created By</p>
+                <div class="like-count">
+                    <img src="assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png" width="30" height="30"  alt="heartImg">
+                    <p>100K</p>
+                </div>
+
+            </article>
+
+        </section>
     </main>
 
     <footer>
         <!-- Your footer content here -->
     </footer>
-    <script src="data/data.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

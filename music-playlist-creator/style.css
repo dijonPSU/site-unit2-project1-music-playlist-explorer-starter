@@ -3,4 +3,44 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    border: 20px black;
+}
+
+
+#playlist-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.playlist-card{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+.like-count{
+    display: flex;
+    align-items: center;
+}
+
+.like-count p{
+    margin: 0;
+}
+
+#banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gainsboro;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+
+.banner-links{
+    display: flex;
+    gap :15px;
 }
