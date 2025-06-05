@@ -75,14 +75,11 @@ function setupModal() {
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
 
             if (playlist) {
-
                 document.querySelector('.modal-playlist-img').src = playlist.playlist_art;
                 document.querySelector('.modal-title').textContent = playlist.playlist_name;
                 document.querySelector('.modal-creator').textContent = playlist.playlist_author;
 
-
                 renderSongs(playlist.songs);
-
 
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
