@@ -1,0 +1,385 @@
+{
+  "playlists": [
+    {
+      "playlistID": 1,
+      "playlist_name": "Summer Time",
+      "playlist_author": "Drake",
+      "playlist_art": "https://picsum.photos/200?random=1",
+      "likes": 0,
+      "songs": [
+        {
+          "songID": 101,
+          "song_name": "Sunshine Boulevard",
+          "artist": "The Waves",
+          "album": "Beach Days",
+          "duration": "3:24",
+          "song_art": "https://picsum.photos/200?random=6"
+        },
+        {
+          "songID": 102,
+          "song_name": "Ocean Drive",
+          "artist": "Coastal Dreams",
+          "album": "Seaside Memories",
+          "duration": "4:15",
+          "song_art": "https://picsum.photos/200?random=17"
+        },
+        {
+          "songID": 103,
+          "song_name": "Tropical Nights",
+          "artist": "Island Rhythms",
+          "album": "Paradise Found",
+          "duration": "3:56",
+          "song_art": "https://picsum.photos/200?random=18"
+        },
+        {
+          "songID": 104,
+          "song_name": "Sunset Serenade",
+          "artist": "The Waves",
+          "album": "Beach Days",
+          "duration": "2:48",
+          "song_art": "https://picsum.photos/200?random=109"
+        }
+      ]
+    },
+    {
+      "playlistID": 2,
+      "playlist_name": "Deep Focus",
+      "playlist_author": "Dijon Miller",
+      "playlist_art": "https://picsum.photos/200?random=22",
+      "likes": 0,
+      "songs": [
+        {
+          "songID": 201,
+          "song_name": "Deep Concentration",
+          "artist": "Mind Waves",
+          "album": "Focus Zone",
+          "duration": "5:12",
+          "song_art": "https://picsum.photos/200?random=103"
+        },
+        {
+          "songID": 202,
+          "song_name": "Ambient Thoughts",
+          "artist": "Cerebral Sounds",
+          "album": "Mindfulness",
+          "duration": "4:45",
+          "song_art": "https://picsum.photos/200?random=121"
+        },
+        {
+          "songID": 203,
+          "song_name": "Quiet Storm",
+          "artist": "Rain Makers",
+          "album": "Natural Elements",
+          "duration": "6:18",
+          "song_art": "https://picsum.photos/200?random=141"
+        },
+        {
+          "songID": 204,
+          "song_name": "Library Whispers",
+          "artist": "Page Turner",
+          "album": "Silent Reading",
+          "duration": "3:52",
+          "song_art": "https://picsum.photos/200?random=131"
+        },
+        {
+          "songID": 205,
+          "song_name": "Midnight Oil",
+          "artist": "Night Owl",
+          "album": "Late Hours",
+          "duration": "4:20",
+          "song_art": "https://picsum.photos/200?random=141"
+        }
+      ]
+    },
+    {
+      "playlistID": 3,
+      "playlist_name": "Workout Mix",
+      "playlist_author": "Fitness Guru",
+      "playlist_art": "https://picsum.photos/200?random=36",
+      "likes": 0,
+      "songs": [
+        {
+          "songID": 301,
+          "song_name": "Power Up",
+          "artist": "Energy Boost",
+          "album": "High Intensity",
+          "duration": "2:55",
+          "song_art": "https://picsum.photos/200?random=213"
+        },
+        {
+          "songID": 302,
+          "song_name": "Run Faster",
+          "artist": "Cardio Kings",
+          "album": "Marathon Ready",
+          "duration": "3:22",
+          "song_art": "https://picsum.photos/200?random=1034"
+        },
+        {
+          "songID": 303,
+          "song_name": "Lift Heavy",
+          "artist": "Iron Pumpers",
+          "album": "Gains",
+          "duration": "3:45",
+          "song_art": "https://picsum.photos/200?random=1056"
+        },
+        {
+          "songID": 304,
+          "song_name": "Final Sprint",
+          "artist": "Last Mile",
+          "album": "Finish Line",
+          "duration": "2:50",
+          "song_art": "https://picsum.photos/200?random=1090"
+        }
+      ]
+    },
+
+    {
+        "playlistID": 4,
+        "playlist_name": "Meta Warrior",
+        "playlist_author": "Lee Fu",
+        "playlist_art": "https://picsum.photos/200?random=43",
+        "likes": 0,
+        "songs": [
+          {
+            "songID": 401,
+            "song_name": "Open Road",
+            "artist": "The Travelers",
+            "album": "Journey On",
+            "duration": "4:10",
+            "song_art": "https://picsum.photos/200?random=612"
+          },
+          {
+            "songID": 402,
+            "song_name": "Desert Highway",
+            "artist": "Dust Riders",
+            "album": "Endless Horizons",
+            "duration": "5:05",
+            "song_art": "https://picsum.photos/200?random=1067"
+          },
+          {
+            "songID": 403,
+            "song_name": "Mountain Pass",
+            "artist": "Peak Experience",
+            "album": "Higher Ground",
+            "duration": "3:38",
+            "song_art": "https://picsum.photos/200?random=10212"
+          },
+          {
+            "songID": 404,
+            "song_name": "Coastal Drive",
+            "artist": "Ocean View",
+            "album": "Sea Breeze",
+            "duration": "4:22",
+            "song_art": "https://picsum.photos/200?random=432"
+          },
+          {
+            "songID": 405,
+            "song_name": "City Lights",
+            "artist": "Urban Explorers",
+            "album": "Downtown",
+            "duration": "3:15",
+            "song_art": "https://picsum.photos/200?random=983"
+          }
+        ]
+    },
+
+    {
+        "playlistID": 4,
+        "playlist_name": "Zuck's Favourite",
+        "playlist_author": "Mark Zuckerberg",
+        "playlist_art": "https://picsum.photos/200?random=4323",
+        "likes": 0,
+        "songs": [
+          {
+            "songID": 401,
+            "song_name": "Open Road",
+            "artist": "The Travelers",
+            "album": "Journey On",
+            "duration": "4:10",
+            "song_art": "https://picsum.photos/200?random=612"
+          },
+          {
+            "songID": 402,
+            "song_name": "Desert Highway",
+            "artist": "Dust Riders",
+            "album": "Endless Horizons",
+            "duration": "5:05",
+            "song_art": "https://picsum.photos/200?random=1067"
+          },
+          {
+            "songID": 403,
+            "song_name": "Mountain Pass",
+            "artist": "Peak Experience",
+            "album": "Higher Ground",
+            "duration": "3:38",
+            "song_art": "https://picsum.photos/200?random=10212"
+          },
+          {
+            "songID": 404,
+            "song_name": "Coastal Drive",
+            "artist": "Ocean View",
+            "album": "Sea Breeze",
+            "duration": "4:22",
+            "song_art": "https://picsum.photos/200?random=432"
+          },
+          {
+            "songID": 405,
+            "song_name": "City Lights",
+            "artist": "Urban Explorers",
+            "album": "Downtown",
+            "duration": "3:15",
+            "song_art": "https://picsum.photos/200?random=983"
+          }
+        ]
+    },
+
+    {
+        "playlistID": 4,
+        "playlist_name": "Pog",
+        "playlist_author": "Lee Fu",
+        "playlist_art": "https://i.pinimg.com/736x/d0/51/ab/d051ab50042140753b6969b042edb7bc.jpg",
+        "likes": 0,
+        "songs": [
+          {
+            "songID": 401,
+            "song_name": "Open Road",
+            "artist": "The Travelers",
+            "album": "Journey On",
+            "duration": "4:10",
+            "song_art": "https://picsum.photos/200?random=612"
+          },
+          {
+            "songID": 402,
+            "song_name": "Desert Highway",
+            "artist": "Dust Riders",
+            "album": "Endless Horizons",
+            "duration": "5:05",
+            "song_art": "https://picsum.photos/200?random=1067"
+          },
+          {
+            "songID": 403,
+            "song_name": "Mountain Pass",
+            "artist": "Peak Experience",
+            "album": "Higher Ground",
+            "duration": "3:38",
+            "song_art": "https://picsum.photos/200?random=10212"
+          },
+          {
+            "songID": 404,
+            "song_name": "Coastal Drive",
+            "artist": "Ocean View",
+            "album": "Sea Breeze",
+            "duration": "4:22",
+            "song_art": "https://picsum.photos/200?random=432"
+          },
+          {
+            "songID": 405,
+            "song_name": "City Lights",
+            "artist": "Urban Explorers",
+            "album": "Downtown",
+            "duration": "3:15",
+            "song_art": "https://picsum.photos/200?random=983"
+          }
+        ]
+    },
+
+    {
+        "playlistID": 4,
+        "playlist_name": "Pool Party",
+        "playlist_author": "Lee Fu",
+        "playlist_art": "https://picsum.photos/200?random=4325",
+        "likes": 0,
+        "songs": [
+          {
+            "songID": 401,
+            "song_name": "Open Road",
+            "artist": "The Travelers",
+            "album": "Journey On",
+            "duration": "4:10",
+            "song_art": "https://picsum.photos/200?random=612"
+          },
+          {
+            "songID": 402,
+            "song_name": "Desert Highway",
+            "artist": "Dust Riders",
+            "album": "Endless Horizons",
+            "duration": "5:05",
+            "song_art": "https://picsum.photos/200?random=1067"
+          },
+          {
+            "songID": 403,
+            "song_name": "Mountain Pass",
+            "artist": "Peak Experience",
+            "album": "Higher Ground",
+            "duration": "3:38",
+            "song_art": "https://picsum.photos/200?random=10212"
+          },
+          {
+            "songID": 404,
+            "song_name": "Coastal Drive",
+            "artist": "Ocean View",
+            "album": "Sea Breeze",
+            "duration": "4:22",
+            "song_art": "https://picsum.photos/200?random=432"
+          },
+          {
+            "songID": 405,
+            "song_name": "City Lights",
+            "artist": "Urban Explorers",
+            "album": "Downtown",
+            "duration": "3:15",
+            "song_art": "https://picsum.photos/200?random=983"
+          }
+        ]
+    },
+
+    {
+      "playlistID": 4,
+      "playlist_name": "Late Night Vibes",
+      "playlist_author": "Lee Fu",
+      "playlist_art": "https://picsum.photos/200?random=4326",
+      "likes": 0,
+      "songs": [
+        {
+          "songID": 401,
+          "song_name": "Open Road",
+          "artist": "The Travelers",
+          "album": "Journey On",
+          "duration": "4:10",
+          "song_art": "https://picsum.photos/200?random=612"
+        },
+        {
+          "songID": 402,
+          "song_name": "Desert Highway",
+          "artist": "Dust Riders",
+          "album": "Endless Horizons",
+          "duration": "5:05",
+          "song_art": "https://picsum.photos/200?random=1067"
+        },
+        {
+          "songID": 403,
+          "song_name": "Mountain Pass",
+          "artist": "Peak Experience",
+          "album": "Higher Ground",
+          "duration": "3:38",
+          "song_art": "https://picsum.photos/200?random=10212"
+        },
+        {
+          "songID": 404,
+          "song_name": "Coastal Drive",
+          "artist": "Ocean View",
+          "album": "Sea Breeze",
+          "duration": "4:22",
+          "song_art": "https://picsum.photos/200?random=432"
+        },
+        {
+          "songID": 405,
+          "song_name": "City Lights",
+          "artist": "Urban Explorers",
+          "album": "Downtown",
+          "duration": "3:15",
+          "song_art": "https://picsum.photos/200?random=983"
+        }
+      ]
+    }
+  ]
+}

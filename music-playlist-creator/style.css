@@ -2,11 +2,14 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: auto;
+    min-height: 100%;
 }
 
 main{
     flex: 1;
     padding: 0 20px;
+    padding-bottom: 10px;
 }
 
 img{
@@ -18,44 +21,80 @@ img{
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
     border: 20px black;
+    min-height: 100vh;
 }
 
 
 #playlist-cards{
     display: grid;
     grid-template-columns: repeat(4, 300px);
-    gap: 100px;
+    gap: 80px;
     justify-content: center;
     margin: 0 auto;
+}
+
+#songc{
+    max-height: 70%;
+    overflow-y: auto;
 }
 
 #footer{
     border: 1px black solid;
     background-color: gainsboro;
-    padding: 50px;
+    padding: 20px;
     width: 100%;
-    margin-top: auto;
+    margin-top: 80px;
+
+    box-sizing: border-box;
+
 
 }
 
 .playlist-card{
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     border: 1px black solid;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     position: relative;
-    width: 250px;
-    height: 325px;
+    width: 300px;
+    height: 390px;
 }
+
+.playlist-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
 
 .playlist-img{
     margin-top: 3px;
+    border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
     height: 180px;
@@ -83,7 +122,7 @@ body {
 }
 
 .like-count{
-    margin-top: 5px;
+    margin-top: 70px;
     margin-left: 1px;
     display: flex;
     flex-direction: row;
@@ -189,15 +228,17 @@ body {
     border-radius: 8px;
     margin-bottom: 10px;
     background-color: #f9f9f9;
+
 }
 
 .song-duration{
     font-size: 14px;
     color: #555;
     font-weight: bold;
-    margin-left: auto;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
 .song-box-img {
     width: 60px;
     height: 60px;
