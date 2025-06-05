@@ -75,36 +75,49 @@
     </main>
 
 
-    <footer id="footer">
-        <section>
-
-        </section>
-    </footer>
-
 
 <div id="modal-overlay" class="modal-overlay">
     <div class="modal-content">
-      <span class="close-button">&times;</span>
+      <!--<span class="close-button">&times;</span>-->
       <div class="modal-header">
         <div class="modal-header-playlist">
             <img src="assets/img/playlist.png" alt="Playlist Cover" class="modal-playlist-img">
-            <h2 id="modal-title">Playlist Title</h2>
-            <p id="modal-creator">Creator Name</p>
+            <div class="modal-title-creator">
+                <h2 class="modal-title">Playlist Title</h2>
+                <p class="modal-creator">Creator Name</p>
+            </div>
         </div>
-          <div class="modal-like-count">
-            <img src="assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png" width="30" height="30" alt="heartImg">
-            <p id="modal-likes">5</p>
-          </div>
         </div>
+
+        <div class="modal-songs-section">
+            <div class="songs-container">
+                <div class="song-box">
+                    <img class="song-box-img" src="assets/img/song.png" alt="Songs">
+                    <div class="song-box-info">
+                        <p>Song Title 2</p>
+                        <p>Artist Name</p>
+                        <p>Albulm name</p>
+                    </div>
+                    <div class="song-duration">2:43</div>
+                </div>
+            </div>
+
+
+        </div>
+
+
       </div>
-      <div class="modal-body">
-        <h3>Songs</h3>
-        <ul id="song-list">
-          <!-- Songs will be added dynamically with JavaScript -->
-        </ul>
-      </div>
+
     </div>
   </div>
+
+
+  <footer id="footer">
+    <section>
+
+
+    </section>
+</footer>
 
 </body>
 </html>
