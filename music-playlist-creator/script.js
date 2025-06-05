@@ -122,8 +122,11 @@ function renderSongs(songs) {
 
 function setupLikeButtons() {
     const likeButtons = document.querySelectorAll('.like-button');
+    const blackHeartPath = "assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png";
+    const redHeartPath = "assets/img/download.png";
 
     likeButtons.forEach(button => {
+        let isLiked = false;
         button.addEventListener('click', function(event) {
             const playlistCard = button.closest('.playlist-card');
             const playlistId = parseInt(playlistCard.dataset.playlistId);
@@ -131,15 +134,17 @@ function setupLikeButtons() {
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
 
             if (playlist) {
-                button.classList.toggle('liked');
-                if (button.classList.contains('liked')) {
+                isLiked = !isLiked;
+                if (isLiked) {
+                    button.src = redHeartPath;
                     playlist.likes++;
                 } else {
+                    button.src = blackHeartPath;
                     playlist.likes = 0;
                 }
 
                 likeCountElement.textContent = playlist.likes;
-                console.log(`liked worked`);
+                console.log(`playlist like worked`);
             }
         });
     });

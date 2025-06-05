@@ -124,17 +124,11 @@ body {
 }
 
 .like-button{
+    background-color: white;
     cursor: pointer;
     transition: filter 0.3s ease;
 }
 
-.like-button:hover{
-    transform: scale(1.1);
-}
-
-.like-button.liked{
-    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-}
 
 .like-count{
     margin-top: 70px;
