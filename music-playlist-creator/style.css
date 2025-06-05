@@ -55,6 +55,8 @@ body {
 
 }
 
+
+
 .playlist-card{
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -119,6 +121,19 @@ body {
 
 .creator-name{
     margin-top: 6px;
+}
+
+.like-button{
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.like-button:hover{
+    transform: scale(1.1);
+}
+
+.like-button.liked{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 .like-count{

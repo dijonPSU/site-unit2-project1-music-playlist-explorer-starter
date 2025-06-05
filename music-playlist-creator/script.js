@@ -1,80 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const playlistCards = document.querySelectorAll('.playlist-card');
-    const modalOverlay = document.getElementById('modal-overlay');
-    const modalContent = document.querySelector('.modal-content');
-
-
-    if (!document.querySelector('.close-button')) {
-        const closeButton = document.createElement('span');
-        closeButton.className = 'close-button';
-        closeButton.innerHTML = '&times;';
-        modalContent.prepend(closeButton);
-
-
-        closeButton.addEventListener('click', function() {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    }
-
-    playlistCards.forEach(card => {
-        card.addEventListener('click', function() {
-
-            const image = card.querySelector('.playlist-img').src;
-            const title = card.querySelector('.playlist-title').textContent;
-            const creator = card.querySelector('.creator-name').textContent;
-            const likes = card.querySelector('.like-count p').textContent;
-
-
-            document.querySelector('.modal-playlist-img').src = image;
-            document.querySelector('.modal-title').textContent = title;
-            document.querySelector('.modal-creator').textContent = creator;
-
-
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-
-    modalOverlay.addEventListener('click', function(event) {
-        if (event.target === modalOverlay) {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-
     fetch('data/data.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('error help me pls');
-        }
-        return response.json();
-    })
-    .then(data => {
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('error help pls');
+            }
+            return response.json();
+        })
+        .then(data => {
 
-        window.playlistData = data;
-
-        renderPlaylistCards(data.playlists);
-
-        setupModal();
-    })
-    .catch(error => {
-        console.error('error fetching playlist data help pls:', error);
-    });
+            window.playlistData = data;
+            renderPlaylistCards(data.playlists);
+            setupModal();
+        })
+        .catch(error => {
+            console.error('error help pls 2', error);
+        });
 });
-
-
-
 
 
 function renderPlaylistCards(playlists) {
@@ -93,13 +34,15 @@ function renderPlaylistCards(playlists) {
                 <p class="creator-name">${playlist.playlist_author}</p>
             </div>
             <div class="like-count">
-                <img src="assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png" width="30" height="30" alt="heartImg">
+                <img class="like-button" src="assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png" width="30" height="30" alt="heartImg">
                 <p>${playlist.likes}</p>
             </div>
         `;
 
         playlistCardsContainer.appendChild(playlistCard);
     });
+
+    setupLikeButtons();
 }
 
 
@@ -121,11 +64,13 @@ function setupModal() {
     }
 
 
-
-
     const playlistCards = document.querySelectorAll('.playlist-card');
     playlistCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(event) {
+            if (event.target.classList.contains('like-button')) {
+                return;
+            }
+
             const playlistId = parseInt(card.dataset.playlistId);
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
 
@@ -152,20 +97,12 @@ function setupModal() {
             document.body.style.overflow = '';
         }
     });
-
-
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
 }
 
 
 function renderSongs(songs) {
     const songsContainer = document.querySelector('.songs-container');
-    songsContainer.innerHTML = '';
+    songsContainer.innerHTML = ''; // get rid of old songs
 
     songs.forEach(song => {
         const songBox = document.createElement('div');
@@ -182,5 +119,31 @@ function renderSongs(songs) {
         `;
 
         songsContainer.appendChild(songBox);
+    });
+}
+
+
+function setupLikeButtons() {
+    const likeButtons = document.querySelectorAll('.like-button');
+
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const playlistCard = button.closest('.playlist-card');
+            const playlistId = parseInt(playlistCard.dataset.playlistId);
+            const likeCountElement = playlistCard.querySelector('.like-count p');
+            const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
+
+            if (playlist) {
+                button.classList.toggle('liked');
+                if (button.classList.contains('liked')) {
+                    playlist.likes++;
+                } else {
+                    playlist.likes = 0;
+                }
+
+                likeCountElement.textContent = playlist.likes;
+                console.log(`liked worked`);
+            }
+        });
     });
 }
