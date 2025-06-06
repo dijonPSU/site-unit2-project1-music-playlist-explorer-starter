@@ -52,7 +52,7 @@ function renderPlaylistCards(playlists) {
     playlistCardsContainer.innerHTML = '';
 
     playlists.forEach(playlist => {
-        
+
         if(playlist.deleted){
             return;
         }
@@ -232,7 +232,7 @@ function setupSearchBar() {
             const playlist = window.playlistData.playlists[i];
             const playlistCard = document.querySelector(`.playlist-card[data-playlist-id="${playlist.playlistID}"]`);
             const playlistName = playlistCard.querySelector('.playlist-title').textContent.toLowerCase();
-            if (!playlistName.includes(searchTerm && !playlist.deleted)) {
+            if (!playlistName.includes(searchTerm) && !playlist.deleted) {
                 playlistCard.style.display = 'none';
             }
         }
