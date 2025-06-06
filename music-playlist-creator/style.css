@@ -12,6 +12,12 @@ main{
     padding-bottom: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -32,6 +38,10 @@ body {
 .banner-title{
     margin-left: 50px;
 
+}
+
+.banner-img{
+    width: 40px;
 }
 
 .to-new-page{
@@ -410,6 +420,7 @@ body {
 }
 
 .search-sort{
+    margin-left: 5px;
     display: flex;
     flex-direction: column;
     gap: 10px;

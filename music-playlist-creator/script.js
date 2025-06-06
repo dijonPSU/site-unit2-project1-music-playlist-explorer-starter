@@ -52,6 +52,11 @@ function renderPlaylistCards(playlists) {
     playlistCardsContainer.innerHTML = '';
 
     playlists.forEach(playlist => {
+        
+        if(playlist.deleted){
+            return;
+        }
+
         const playlistCard = document.createElement('article');
         playlistCard.className = 'playlist-card';
         playlistCard.dataset.playlistId = playlist.playlistID;
@@ -209,9 +214,9 @@ function setupDeleteButtons() {
             const playlistCard = button.closest('.playlist-card');
             const playlistId = parseInt(playlistCard.dataset.playlistId);
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
-
             if (playlist) {
                 playlistCard.remove();
+                playlist.deleted = true;
             }
         });
     });
@@ -227,7 +232,7 @@ function setupSearchBar() {
             const playlist = window.playlistData.playlists[i];
             const playlistCard = document.querySelector(`.playlist-card[data-playlist-id="${playlist.playlistID}"]`);
             const playlistName = playlistCard.querySelector('.playlist-title').textContent.toLowerCase();
-            if (!playlistName.includes(searchTerm)) {
+            if (!playlistName.includes(searchTerm && !playlist.deleted)) {
                 playlistCard.style.display = 'none';
             }
         }
