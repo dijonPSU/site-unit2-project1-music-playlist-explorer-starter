@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data/data.json')
         .then(response => {
@@ -7,31 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
             window.playlistData = data;
             renderPlaylistCards(data.playlists);
             setupModal();
-            let sorttt = document.getElementById('sort');
+            let select = document.getElementById('sort');
+            select.addEventListener('change', function(event) {
+            sortPlaylist(select);
         })
+
+    });
 
 });
 
 
 
 function sortPlaylist(select){
-    select.addEventListener('click', function(event) {
+    const selectedOption = select.options[select.selectedIndex];
+    if (selectedOption.value === '1') {
         console.log('Sorting by name');
-        const selectedOption = event.target.value;
-        if (selectedOption.value === '1') {
-            console.log('Sorting by name');
-            window.playlistData.playlists.sort((a, b) => a.playlist_name.localeCompare(b.playlist_name));
-        } else if (selectedOption.value === '2') {
-            console.log('Sorting by name');
-            window.playlistData.playlists.sort((a, b) => b.likes - a.likes);
-        } else if (selectedOption.value === '3') {
-            console.log('Sorting by name');
-            window.playlistData.playlists.sort((a, b) => b.date_added - a.date_added);
-        }
-        renderPlaylistCards(window.playlistData.playlists);
-    });
+        window.playlistData.playlists.sort((a, b) => a.playlist_name.localeCompare(b.playlist_name));
+    } else if (selectedOption.value === '2') {
+        console.log('Sorting by likes');
+        window.playlistData.playlists.sort((a, b) => b.likes - a.likes);
+    } else if (selectedOption.value === '3') {
+        console.log('Sorting by date');
+        window.playlistData.playlists.sort((a, b) => b.playlistID - a.playlistID);
+    }
+    renderPlaylistCards(window.playlistData.playlists);
+};
 
-}
 
 
 
