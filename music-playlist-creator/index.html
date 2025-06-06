@@ -20,12 +20,19 @@
 
     </header>
 
-    <select id="sort">
-        <option value="0">Sort by</option>
-        <option value="1">A-Z</option>
-        <option value="2">Number of likes</option>
-        <option value="3">Date added</option>
-    </select>
+    <div class="search-sort">
+        <label class=""></label>
+        <input type="text" id="search" placeholder="Search for a playlist">
+
+        <select id="sort">
+            <option disabled selected>Sort by</option>
+            <option value="1">A-Z</option>
+            <option value="2">Number of likes</option>
+            <option value="3">Date added</option>
+        </select>
+
+    </div>
+
 
     <main>
         <section id="playlist-cards">

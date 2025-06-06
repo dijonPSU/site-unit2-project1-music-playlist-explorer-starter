@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data/data.json')
         .then(response => {
@@ -7,15 +5,25 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             window.playlistData = data;
+            const searchBar = document.getElementById('search');
+            searchBar.addEventListener('input', function(event) {
+                if(event.target.value.length > 1){
+                    setupSearchBar();
+                    setupModal();
+                } else {
+                    renderPlaylistCards(data.playlists)
+                    setupModal();
+                }
+            });
+
             renderPlaylistCards(data.playlists);
             setupModal();
             let select = document.getElementById('sort');
             select.addEventListener('change', function(event) {
-            sortPlaylist(select);
-        })
+                sortPlaylist(select);
 
-    });
-
+            })
+        });
 });
 
 
@@ -33,6 +41,7 @@ function sortPlaylist(select){
         window.playlistData.playlists.sort((a, b) => b.playlistID - a.playlistID);
     }
     renderPlaylistCards(window.playlistData.playlists);
+    setupModal();
 };
 
 
@@ -200,4 +209,23 @@ function setupDeleteButtons() {
             }
         });
     });
+}
+
+
+function setupSearchBar() {
+    const searchBar = document.getElementById('search');
+    const searchTerm = event.target.value.toLowerCase();
+    const playlistCards = document.querySelector('.playlist-card');
+    if (window.playlistData.playlists.find(p => p.playlist_name.toLowerCase().includes(searchTerm))){
+        for (let i = 0; i < window.playlistData.playlists.length; i++) {
+            const playlist = window.playlistData.playlists[i];
+            const playlistCard = document.querySelector(`.playlist-card[data-playlist-id="${playlist.playlistID}"]`);
+            const playlistName = playlistCard.querySelector('.playlist-title').textContent.toLowerCase();
+            if (!playlistName.includes(searchTerm)) {
+                playlistCard.style.display = 'none';
+            }
+        }
+    } else {
+        playlistCards.style.display = 'none';
+    }
 }

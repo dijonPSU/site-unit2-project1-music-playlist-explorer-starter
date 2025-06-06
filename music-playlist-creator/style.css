@@ -31,6 +31,7 @@ body {
 
 .banner-title{
     margin-left: 50px;
+
 }
 
 .to-new-page{
@@ -164,7 +165,7 @@ body {
     background-color: rgba(0,0,0,0.5);
 }
 .modal-overlay {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -401,16 +402,29 @@ body {
     flex-direction: row;
     justify-content: space-between;
     background-color: gainsboro;
-    padding: 15px 20px;
-    margin-bottom: 0px;
+    padding: 10px 20px;
+    margin-bottom: px;
     border: 1px black solid;
     flex-wrap: wrap;
 
 }
 
+.search-sort{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#search{
+    margin-right: 50px;
+    width: 500px;
+    height: 20px;
+}
+
 #sort{
     margin-bottom: 30px;
     width: 250px;
+    height: 20px;
 }
 
 

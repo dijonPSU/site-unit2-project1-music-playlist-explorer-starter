@@ -6,6 +6,7 @@
       "playlist_author": "Drake",
       "playlist_art": "https://pbs.twimg.com/media/DfsvqT6XUAYkPdR.jpg",
       "likes": 6,
+      "liked": false,
       "songs": [
         {
           "songID": 101,
@@ -47,6 +48,7 @@
       "playlist_author": "Dijon",
       "playlist_art": "https://i.imgflip.com/mtrij.jpg?a485712",
       "likes": 0,
+
       "songs": [
         {
           "songID": 201,
