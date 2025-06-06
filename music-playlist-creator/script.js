@@ -55,6 +55,13 @@ function renderPlaylistCards(playlists) {
         const playlistCard = document.createElement('article');
         playlistCard.className = 'playlist-card';
         playlistCard.dataset.playlistId = playlist.playlistID;
+        let imageToUse;
+
+        if(playlist.liked){
+            imageToUse = "assets/img/download.png";
+        }else{
+            imageToUse = "assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png";
+        }
 
         playlistCard.innerHTML = `
             <img src="${playlist.playlist_art}" alt="${playlist.playlist_name}" class="playlist-img">
@@ -63,7 +70,7 @@ function renderPlaylistCards(playlists) {
                 <p class="creator-name">${playlist.playlist_author}</p>
             </div>
             <div class="like-count">
-                <img class="like-button" src="assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png" width="30" height="30" alt="heartImg">
+                <img class="like-button" src="${imageToUse}" width="30" height="30" alt="heartImg">
                 <p>${playlist.likes}</p>
             <div class="delete-section">
                 <img class="delete-button" src="assets/img/trash.jpg" width="30" height="30" alt="deleteImg">
@@ -171,25 +178,24 @@ function setupLikeButtons() {
     const redHeartPath = "assets/img/download.png";
 
     likeButtons.forEach(button => {
-        let isLiked = false;
         button.addEventListener('click', function(event) {
             const playlistCard = button.closest('.playlist-card');
             const playlistId = parseInt(playlistCard.dataset.playlistId);
             const likeCountElement = playlistCard.querySelector('.like-count p');
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
+            isLiked = playlist.liked;
 
             if (playlist) {
-                isLiked = !isLiked;
-                if (isLiked) {
+                if (!isLiked) {
                     button.src = redHeartPath;
                     playlist.likes++;
+                    playlist.liked = true;
                 } else {
                     button.src = blackHeartPath;
                     playlist.likes = --playlist.likes;
+                    playlist.liked = false;
                 }
-
                 likeCountElement.textContent = playlist.likes;
-                console.log(`playlist like worked`);
             }
         });
     });
