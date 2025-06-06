@@ -50,6 +50,7 @@ function setupModal() {
     const modalOverlay = document.getElementById('modal-overlay');
     const modalContent = document.querySelector('.modal-content');
 
+    let currentPlaylist = null;
 
     if (!document.querySelector('.close-button')) {
         const closeButton = document.createElement('span');
@@ -64,6 +65,19 @@ function setupModal() {
     }
 
 
+    const shuffleButton = document.getElementById('shuffle-button');
+    shuffleButton.addEventListener('click', function() {
+        if (currentPlaylist) {
+            const shuffledSongs = shuffleSongs([...currentPlaylist.songs]);
+            renderSongs(shuffledSongs);
+
+            shuffleButton.textContent = "Shuffled!";
+            setTimeout(() => {
+                shuffleButton.textContent = "Shuffle Playlist";
+            }, 1500);
+        }
+    });
+
     const playlistCards = document.querySelectorAll('.playlist-card');
     playlistCards.forEach(card => {
         card.addEventListener('click', function(event) {
@@ -75,18 +89,19 @@ function setupModal() {
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
 
             if (playlist) {
+                currentPlaylist = playlist;
                 document.querySelector('.modal-playlist-img').src = playlist.playlist_art;
                 document.querySelector('.modal-title').textContent = playlist.playlist_name;
                 document.querySelector('.modal-creator').textContent = playlist.playlist_author;
 
-                renderSongs(playlist.songs);
 
+                shuffleButton.textContent = "Shuffle Playlist";
+                renderSongs(playlist.songs);
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
         });
     });
-
 
     modalOverlay.addEventListener('click', function(event) {
         if (event.target === modalOverlay) {
@@ -97,9 +112,14 @@ function setupModal() {
 }
 
 
+function shuffleSongs(songs) {
+    return songs.sort(() => Math.random() - 0.5);
+}
+
+
 function renderSongs(songs) {
     const songsContainer = document.querySelector('.songs-container');
-    songsContainer.innerHTML = ''; // get rid of old songs
+    songsContainer.innerHTML = '';
 
     songs.forEach(song => {
         const songBox = document.createElement('div');

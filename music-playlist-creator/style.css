@@ -216,9 +216,35 @@ body {
     position: relative;
 }
 
- .modal-songs-section{
+.modal-songs-section{
     margin-top: 30px;
     padding-top: 20px;
+}
+
+.modal-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+#shuffle-button {
+    background-color: rgb(83, 83, 240);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#shuffle-button:hover {
+    background-color:  rgb(83, 83, 240);
+    transform: scale(1.05);
+}
+
+#shuffle-button:active {
+    transform: scale(0.98);
 }
 
 .songs-container{
@@ -288,7 +314,7 @@ body {
     justify-content: space-between;
     background-color: gainsboro;
     padding: 15px 20px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     border: 1px black solid;
     flex-wrap: wrap;
 
