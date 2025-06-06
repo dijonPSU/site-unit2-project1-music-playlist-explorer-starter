@@ -107,7 +107,7 @@ function setupModal() {
 
 
 function shuffleSongs(songs) {
-    return songs.sort(() => Math.random() - 0.5);
+    return songs.sort(() => Math.random() - 0.52);
 }
 
 

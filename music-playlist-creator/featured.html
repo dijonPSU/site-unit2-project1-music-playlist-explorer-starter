@@ -1,20 +1,45 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Featured</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Featured Playlist - Spotify from Temu</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="featured.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Featured</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Featured Playlist</h2>
-      <p>Here are some of the most popular playlists on Spotify.</p>
-    </section>
-  </main>
+    <header id="banner">
+        <h1 class="banner-title">brainrot spotify</h1>
+        <div class="banner-links">
+            <p class="to-new-page"><a href="featured.html">Featured</a></p>
+            <p class="to-new-page"><a href="index.html">All</a></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="featured-playlist">
+            <h2>Featured Playlist</h2>
+
+            <div class="featured-container">
+                <div class="featured-header">
+                    <img id="featured-img" src="" alt="Featured Playlist Cover" class="featured-playlist-img">
+                    <div class="featured-info">
+                        <h2 id="featured-title" class="featured-title"></h2>
+                        <p id="featured-creator" class="featured-creator"></p>
+                    </div>
+                </div>
+
+                <div class="featured-songs-section">
+                    <h3>Songs</h3>
+                    <div id="featured-songs-container" class="songs-container"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <section>
+            <!-- Footer content -->
+        </section>
+    </footer>
 </body>
 </html>
