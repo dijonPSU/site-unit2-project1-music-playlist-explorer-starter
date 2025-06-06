@@ -135,7 +135,7 @@
     {
         "playlistID": 4,
         "playlist_name": "Meta Focus",
-        "playlist_author": "Lee Fu",
+        "playlist_author": "Mark Zuckerberg",
         "playlist_art": "https://pbs.twimg.com/media/F0aeZ-qXoAIUg5N.jpg",
         "likes": 0,
         "songs": [
@@ -184,7 +184,7 @@
 
     {
         "playlistID": 5,
-        "playlist_name": "Party Mix",
+        "playlist_name": "Leetcode Grind",
         "playlist_author": "Mark Zuckerberg",
         "playlist_art": "https://picsum.photos/200?random=4323",
         "likes": 0,

@@ -1,21 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data/data.json')
         .then(response => {
-            if (!response.ok) {
-                throw new Error('error help pls');
-            }
             return response.json();
         })
         .then(data => {
-
             window.playlistData = data;
             renderPlaylistCards(data.playlists);
             setupModal();
         })
-        .catch(error => {
-            console.error('error help pls 2', error);
-        });
+
 });
+
+
+
 
 function renderPlaylistCards(playlists) {
     const playlistCardsContainer = document.getElementById('playlist-cards');
@@ -35,6 +32,9 @@ function renderPlaylistCards(playlists) {
             <div class="like-count">
                 <img class="like-button" src="assets/img/black-heart-love-valentine-symbol-sign-icon-transparent-background-7040816949546730lc5mhxmre.png" width="30" height="30" alt="heartImg">
                 <p>${playlist.likes}</p>
+            <div class="delete-section">
+                <img class="delete-button" src="assets/img/trash.jpg" width="30" height="30" alt="deleteImg">
+                </div>
             </div>
         `;
 
@@ -42,8 +42,8 @@ function renderPlaylistCards(playlists) {
     });
 
     setupLikeButtons();
+    setupDeleteButtons();
 }
-
 
 function setupModal() {
     const modalOverlay = document.getElementById('modal-overlay');
@@ -75,7 +75,7 @@ function setupModal() {
     const playlistCards = document.querySelectorAll('.playlist-card');
     playlistCards.forEach(card => {
         card.addEventListener('click', function(event) {
-            if (event.target.classList.contains('like-button')) {
+            if (event.target.classList.contains('like-button') || event.target.classList.contains('delete-button')) {
                 return;
             }
 
@@ -94,6 +94,7 @@ function setupModal() {
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
+
         });
     });
 
@@ -105,11 +106,9 @@ function setupModal() {
     });
 }
 
-
 function shuffleSongs(songs) {
-    return songs.sort(() => Math.random() - 0.52);
+    return songs.sort(() => Math.random() - 0.5);
 }
-
 
 function renderSongs(songs) {
     const songsContainer = document.querySelector('.songs-container');
@@ -132,7 +131,6 @@ function renderSongs(songs) {
         songsContainer.appendChild(songBox);
     });
 }
-
 
 function setupLikeButtons() {
     const likeButtons = document.querySelectorAll('.like-button');
@@ -159,6 +157,24 @@ function setupLikeButtons() {
 
                 likeCountElement.textContent = playlist.likes;
                 console.log(`playlist like worked`);
+            }
+        });
+    });
+}
+
+function setupDeleteButtons() {
+    const deleteButtons = document.querySelectorAll('.delete-button');
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const playlistCard = button.closest('.playlist-card');
+            const playlistId = parseInt(playlistCard.dataset.playlistId);
+            const deleteButton = document.querySelectorAll('.delete-button');
+            const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
+
+            if (playlist) {
+                console.log(`playlist delete worked`);
+
             }
         });
     });
