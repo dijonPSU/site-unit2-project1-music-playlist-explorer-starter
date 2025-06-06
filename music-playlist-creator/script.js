@@ -7,10 +7,31 @@ document.addEventListener('DOMContentLoaded', function() {
             window.playlistData = data;
             renderPlaylistCards(data.playlists);
             setupModal();
+            let sorttt = document.getElementById('sort');
         })
 
 });
 
+
+
+function sortPlaylist(select){
+    select.addEventListener('click', function(event) {
+        console.log('Sorting by name');
+        const selectedOption = event.target.value;
+        if (selectedOption.value === '1') {
+            console.log('Sorting by name');
+            window.playlistData.playlists.sort((a, b) => a.playlist_name.localeCompare(b.playlist_name));
+        } else if (selectedOption.value === '2') {
+            console.log('Sorting by name');
+            window.playlistData.playlists.sort((a, b) => b.likes - a.likes);
+        } else if (selectedOption.value === '3') {
+            console.log('Sorting by name');
+            window.playlistData.playlists.sort((a, b) => b.date_added - a.date_added);
+        }
+        renderPlaylistCards(window.playlistData.playlists);
+    });
+
+}
 
 
 
@@ -152,7 +173,7 @@ function setupLikeButtons() {
                     playlist.likes++;
                 } else {
                     button.src = blackHeartPath;
-                    playlist.likes = 0;
+                    playlist.likes = --playlist.likes;
                 }
 
                 likeCountElement.textContent = playlist.likes;
@@ -169,7 +190,6 @@ function setupDeleteButtons() {
         button.addEventListener('click', function(event) {
             const playlistCard = button.closest('.playlist-card');
             const playlistId = parseInt(playlistCard.dataset.playlistId);
-            const deleteButton = document.querySelectorAll('.delete-button');
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
 
             if (playlist) {

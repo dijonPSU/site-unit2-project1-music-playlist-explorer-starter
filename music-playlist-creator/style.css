@@ -402,10 +402,15 @@ body {
     justify-content: space-between;
     background-color: gainsboro;
     padding: 15px 20px;
-    margin-bottom: 70px;
+    margin-bottom: 0px;
     border: 1px black solid;
     flex-wrap: wrap;
 
+}
+
+.sort{
+    margin-bottom: 30px;
+    width: 200px;
 }
 
 
