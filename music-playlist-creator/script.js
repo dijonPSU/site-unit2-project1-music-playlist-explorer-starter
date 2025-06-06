@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            renderPlaylistCards(data.playlists);
+            setupModal();
+            let select = document.getElementById('sort');
+            select.addEventListener('change', function(event) {
+                sortPlaylist(select);
+
+            })
             window.playlistData = data;
             const searchBar = document.getElementById('search');
             searchBar.addEventListener('input', function(event) {
@@ -15,14 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     setupModal();
                 }
             });
-
-            renderPlaylistCards(data.playlists);
-            setupModal();
-            let select = document.getElementById('sort');
-            select.addEventListener('change', function(event) {
-                sortPlaylist(select);
-
-            })
         });
 });
 
@@ -215,8 +214,9 @@ function setupDeleteButtons() {
             const playlistId = parseInt(playlistCard.dataset.playlistId);
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
             if (playlist) {
-                playlistCard.remove();
                 playlist.deleted = true;
+                renderPlaylistCards(window.playlistData.playlists);
+
             }
         });
     });
@@ -230,7 +230,11 @@ function setupSearchBar() {
     if (window.playlistData.playlists.find(p => p.playlist_name.toLowerCase().includes(searchTerm))){
         for (let i = 0; i < window.playlistData.playlists.length; i++) {
             const playlist = window.playlistData.playlists[i];
+            if(playlist.deleted){
+                continue;
+            }
             const playlistCard = document.querySelector(`.playlist-card[data-playlist-id="${playlist.playlistID}"]`);
+            console.log(playlistCard)
             const playlistName = playlistCard.querySelector('.playlist-title').textContent.toLowerCase();
             if (!playlistName.includes(searchTerm) && !playlist.deleted) {
                 playlistCard.style.display = 'none';
