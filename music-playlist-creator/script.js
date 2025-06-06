@@ -173,8 +173,7 @@ function setupDeleteButtons() {
             const playlist = window.playlistData.playlists.find(p => p.playlistID === playlistId);
 
             if (playlist) {
-                console.log(`playlist delete worked`);
-
+                playlistCard.remove();
             }
         });
     });
