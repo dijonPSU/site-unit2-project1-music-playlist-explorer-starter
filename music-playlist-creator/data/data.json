@@ -4,7 +4,7 @@
       "playlistID": 1,
       "playlist_name": "Summer Time",
       "playlist_author": "Drake",
-      "playlist_art": "https://picsum.photos/200?random=1",
+      "playlist_art": "https://pbs.twimg.com/media/DfsvqT6XUAYkPdR.jpg",
       "likes": 0,
       "songs": [
         {
@@ -43,9 +43,9 @@
     },
     {
       "playlistID": 2,
-      "playlist_name": "Deep Focus",
-      "playlist_author": "Dijon Miller",
-      "playlist_art": "https://picsum.photos/200?random=22",
+      "playlist_name": "One with the force",
+      "playlist_author": "Dijon",
+      "playlist_art": "https://i.imgflip.com/mtrij.jpg?a485712",
       "likes": 0,
       "songs": [
         {
@@ -94,7 +94,7 @@
       "playlistID": 3,
       "playlist_name": "Workout Mix",
       "playlist_author": "Fitness Guru",
-      "playlist_art": "https://picsum.photos/200?random=36",
+      "playlist_art": "data:image/jpeg;base64,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",
       "likes": 0,
       "songs": [
         {
@@ -134,9 +134,9 @@
 
     {
         "playlistID": 4,
-        "playlist_name": "Meta Warrior",
+        "playlist_name": "Meta Focus",
         "playlist_author": "Lee Fu",
-        "playlist_art": "https://picsum.photos/200?random=43",
+        "playlist_art": "https://pbs.twimg.com/media/F0aeZ-qXoAIUg5N.jpg",
         "likes": 0,
         "songs": [
           {
@@ -183,8 +183,8 @@
     },
 
     {
-        "playlistID": 4,
-        "playlist_name": "Zuck's Favourite",
+        "playlistID": 5,
+        "playlist_name": "Party Mix",
         "playlist_author": "Mark Zuckerberg",
         "playlist_art": "https://picsum.photos/200?random=4323",
         "likes": 0,
@@ -233,7 +233,7 @@
     },
 
     {
-        "playlistID": 4,
+        "playlistID": 6,
         "playlist_name": "Pog",
         "playlist_author": "Lee Fu",
         "playlist_art": "https://i.pinimg.com/736x/d0/51/ab/d051ab50042140753b6969b042edb7bc.jpg",
@@ -283,7 +283,7 @@
     },
 
     {
-        "playlistID": 4,
+        "playlistID": 7,
         "playlist_name": "Pool Party",
         "playlist_author": "Lee Fu",
         "playlist_art": "https://picsum.photos/200?random=4325",
@@ -333,7 +333,7 @@
     },
 
     {
-      "playlistID": 4,
+      "playlistID": 8,
       "playlist_name": "Late Night Vibes",
       "playlist_author": "Lee Fu",
       "playlist_art": "https://picsum.photos/200?random=4326",

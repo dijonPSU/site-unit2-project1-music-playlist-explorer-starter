@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-
 function renderPlaylistCards(playlists) {
     const playlistCardsContainer = document.getElementById('playlist-cards');
     playlistCardsContainer.innerHTML = '';
@@ -70,11 +69,6 @@ function setupModal() {
         if (currentPlaylist) {
             const shuffledSongs = shuffleSongs([...currentPlaylist.songs]);
             renderSongs(shuffledSongs);
-
-            shuffleButton.textContent = "Shuffled!";
-            setTimeout(() => {
-                shuffleButton.textContent = "Shuffle Playlist";
-            }, 1500);
         }
     });
 
@@ -95,7 +89,7 @@ function setupModal() {
                 document.querySelector('.modal-creator').textContent = playlist.playlist_author;
 
 
-                shuffleButton.textContent = "Shuffle Playlist";
+                shuffleButton.textContent = "Shuffle";
                 renderSongs(playlist.songs);
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
