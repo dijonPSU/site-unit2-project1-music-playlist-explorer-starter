@@ -35,13 +35,13 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
       - [x] Title
       - [x] Artist
       - [x] Duration
-  - [ ] The modal itself should:
+  - [x] The modal itself should:
     - [x] Not occupy the entire screen.
     - [x] Have a shadow to show that it is a pop-up.
     - [x] Appear floating on the screen.
     - [x] The backdrop should appear darker or in a different shade.
 
-- [] **Like Playlists**
+- [x] **Like Playlists**
   - [x] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
   - [x] When the heart icon is clicked:
     - [x] If previously unliked:
@@ -50,7 +50,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
     - [x] If previously liked:
       - [x] The like count on the playlist tile should decrease by 1.
       - [x] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
       - [x] a playlist with a like count of 0
       - [x] a playlist with a non-zero like count
 
@@ -118,9 +118,9 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
     - [ ] All text in the text input field is deleted
     - [x] All playlists in the `data.json` file are displayed in a grid view
     - [ ] **Optional:** If the Add Playlist, Edit Existing Playlist, or Delete Playlist stretch features were implemented:
-      - [x] If users can add a playlist, added playlists should be included in search results.
+      - [] If users can add a playlist, added playlists should be included in search results.
       - [ ] If users can edit a playlist, search results should reflect the latest edits to each playlist.
-      - [ ] If users can delete a playlist, deleted playlists should no longer be included in search results.
+      - [x] If users can delete a playlist, deleted playlists should no longer be included in search results.
       - **Note:** You will not be graded on the implementation of this optional subfeature to keep your grade of this stretch feature independent of your implementation of other stretch features. However, we highly suggest including this in your implementation to model realistic behavior of real applications.
 
 - [x] **Sorting Options**
