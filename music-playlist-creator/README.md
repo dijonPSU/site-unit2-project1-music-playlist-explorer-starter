@@ -4,9 +4,9 @@
 
 Submitted by: **Dijon Miller**
 
-Estimated time spent: **#18** hours spent in total
+Estimated time spent: **#22** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://brainrot-spotify.onrender.com/index.html)
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://brainrot-spotify.onrender.com)
 
 ### Application Features
 
@@ -52,7 +52,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
       - [x] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
       - [x] a playlist with a like count of 0
-      - [ ] a playlist with a non-zero like count
+      - [x] a playlist with a non-zero like count
 
 - [x] **Shuffle Songs**
   - [x] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
@@ -103,22 +103,22 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
   - [x] Add a delete button to each playlist tile within the grid view.
   - [x] When clicked, the playlist is removed from the playlist grid view.
 
-- [ ] **Search Functionality**
-  - [ ] Implement a search bar that allows users to filter playlists by:
-    - [ ] Name
+- [x] **Search Functionality**
+  - [x] Implement a search bar that allows users to filter playlists by:
+    - [x] Name
     - [ ] Author
   - [ ] The search bar should include:
-    - [ ] Text input field
+    - [x] Text input field
     - [ ] Submit/Search Button
     - [ ] Clear Button
-  - [ ] Playlists matching the search query in the text input are displayed in a grid view when the user:
-    - [ ] Presses the Enter Key
+  - [x] Playlists matching the search query in the text input are displayed in a grid view when the user:
+    - [x] Presses the Enter Key
     - [ ] Clicks the Submit/Search Button
   - [ ] User can click the clear button. When clicked:
     - [ ] All text in the text input field is deleted
-    - [ ] All playlists in the `data.json` file are displayed in a grid view
+    - [x] All playlists in the `data.json` file are displayed in a grid view
     - [ ] **Optional:** If the Add Playlist, Edit Existing Playlist, or Delete Playlist stretch features were implemented:
-      - [ ] If users can add a playlist, added playlists should be included in search results.
+      - [x] If users can add a playlist, added playlists should be included in search results.
       - [ ] If users can edit a playlist, search results should reflect the latest edits to each playlist.
       - [ ] If users can delete a playlist, deleted playlists should no longer be included in search results.
       - **Note:** You will not be graded on the implementation of this optional subfeature to keep your grade of this stretch feature independent of your implementation of other stretch features. However, we highly suggest including this in your implementation to model realistic behavior of real applications.
@@ -132,23 +132,22 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
+`TODO://` Add the embedded URL code to your animated app walkthrough below, `https://www.loom.com/share/c3adbf3cffbc4f9fbd337df50d849a4f?sid=73ac4e49-c0aa-4fee-9665-0c888df27f5e`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+`https://www.loom.com/share/c3adbf3cffbc4f9fbd337df50d849a4f?sid=73ac4e49-c0aa-4fee-9665-0c888df27f5e`
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
-
-Add your response here
+Yes, the labs helped me to complete all of the core features. Going to the stretch features, it gave me a great foundation, but would require more time to learn additional things to present a good quality functional feature.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+I would structure my code better, reduce redudancy, improve logic, handle requests better and design better. I also believe I would be able to finish all of the stretch features and unstand them completely.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+In the end, I fixed all of the known bugs, there are still  things that probably don't work in test cases I haven't tried. Next time my peer pedro added a cool feature where you can select the delete button and choose which playlist you want to delete instead of it being fixed on each playlist. I would like to try that next time!
 
 ### Open-source libraries used
 
